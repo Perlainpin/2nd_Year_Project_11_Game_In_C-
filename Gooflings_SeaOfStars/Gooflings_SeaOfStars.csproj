@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>$(MSBuildProjectName)</AssemblyName>
+    <RootNamespace>Gooflings</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Managers\**" />
+    <EmbeddedResource Remove="Managers\**" />
+    <None Remove="Managers\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Managers\BattleManager.cs" />
+    <Compile Include="Managers\InputManager.cs" />
+    <Compile Include="Managers\GameManager.cs" />
+    <Compile Include="Managers\MapManager.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="img\" />
+    <Folder Include="MapTxt\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Pastel" Version="5.0.0" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.3" />
+  </ItemGroup>
+</Project>
